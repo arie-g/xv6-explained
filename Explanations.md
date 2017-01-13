@@ -21,7 +21,7 @@ This is the mother of all programs that hogs the computer to itself and manages 
 
 The kernel also keeps control over the "mode" bit (in the `%ps` register),
 which marks whether current commands are running in user-mode
-(and therefore canӴ do all kinds of privileged stuff) or kernel-mode (and therefore can do whatever it wants).
+(and therefore can't do all kinds of privileged stuff) or kernel-mode (and therefore can do whatever it wants).
 
 ###*Boot*
 The processor (that is, the actual computer) does not know what operating system is installed, what it looks like, or how large it is.
@@ -37,7 +37,7 @@ So what?
 
 Every operating system needs to make sure that its first 512 bytes are a small program (it has to be small; it's only 512 bytes!)
 that loads the rest of the operating system to the memory and sets the PC to whatever place it needs to be in.
-If 512 bytes arenӴ enough for this, the program can actually call a slightly larger program that can load and set up more.
+If 512 bytes aren't enough for this, the program can actually call a slightly larger program that can load and set up more.
 
 In short:
 
@@ -83,7 +83,41 @@ A process can call the kernel to do `fork()`, which creates a new process, which
 
 `Fork()` creates a new process, and leaves the parent running. `Exec()`, on the other hand, replaces the process's program with a new program. Itӳ still the same process, but with new code (and variables, stack, etc.). Registers, pid, etc. remain the same.
 
-It is common practice to have the child of `fork` call `exec` after making sure it is the child. So why not just make a single function that does both fork and exec together? There is a brilliant explanation for this, and I donӴ remember what it is.
+It is common practice to have the child of `fork` call `exec` after making sure it is the child. So why not just make a single function that does both fork and exec together? There is a brilliant explanation for this, and I don
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+remember what it is.
 
 ###*Process termination*
 
