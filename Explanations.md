@@ -21,7 +21,7 @@ This is the mother of all programs that hogs the computer to itself and manages 
 
 The kernel also keeps control over the "mode" bit (in the `%ps` register),
 which marks whether current commands are running in user-mode
-(and therefore canӴ do all kinds of privileged stuff) or kernel-mode (and therefore can do whatever it wants).
+(and therefore can't do all kinds of privileged stuff) or kernel-mode (and therefore can do whatever it wants).
 
 ###*Boot*
 The processor (that is, the actual computer) does not know what operating system is installed, what it looks like, or how large it is.
